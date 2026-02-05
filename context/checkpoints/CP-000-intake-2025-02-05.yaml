@@ -1,0 +1,69 @@
+# Checkpoint #0: Intake
+# Инициализация проекта Арендо-Соседи
+
+checkpoint:
+  id: "CP-000-intake-2025-02-05"
+  created_at: "2025-02-05"
+  created_by: "Orchestrator Agent"
+
+  phase: "Intake"
+  status: "completed"
+
+  summary: |
+    Проект "Арендо-Соседи" инициализирован. Это гиперлокальная P2P-платформа
+    для аренды вещей между соседями через Telegram WebApp. Целевой рынок —
+    50M+ жителей многоквартирных домов в РФ. Монетизация через комиссию 10-15%.
+
+    Ключевое преимущество — гиперлокальность и социальное доверие между соседями.
+    Распространение через домовые чаты в Telegram.
+
+  participating_agents:
+    - agent: "Orchestrator"
+      contribution: "Анализ идеи, создание Project Brief, инициализация контекста"
+
+  artifacts:
+    - path: "context/project-brief.yaml"
+      status: "created"
+      summary: "Полное описание проекта, scope, constraints, tech stack"
+
+  decisions:
+    - id: "DEC-001"
+      decision: "Telegram WebApp как основная платформа"
+      rationale: "Интеграция с домовыми чатами, не требует установки приложения"
+      stakeholder: "Orchestrator Agent"
+
+    - id: "DEC-002"
+      decision: "YooKassa для платежей"
+      rationale: "Надёжный провайдер для РФ рынка, поддержка депозитов"
+      stakeholder: "Orchestrator Agent"
+
+    - id: "DEC-003"
+      decision: "Django + React tech stack"
+      rationale: "Быстрая разработка, хорошая экосистема, знакомый стек"
+      stakeholder: "Orchestrator Agent"
+
+  next_actions:
+    - action: "Создать Vision Document"
+      agent: "Product"
+      priority: 1
+
+    - action: "Провести конкурентный анализ"
+      agent: "Research"
+      priority: 2
+
+    - action: "Создать PRD для MVP"
+      agent: "Product"
+      priority: 3
+
+    - action: "Определить метрики и tracking plan"
+      agent: "Analytics"
+      priority: 4
+
+  blockers: []
+
+  metrics:
+    completion_percentage: 100
+    documents_created: 1
+    decisions_made: 3
+
+  ready_for: "Discovery Phase"
