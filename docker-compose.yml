@@ -1,0 +1,13 @@
+# Arenda-sosedi: frontend (Vite SPA) на порту 8092
+# Запуск на VPS: из корня репо — docker compose up -d --build
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: arenda-sosedi-frontend:latest
+    container_name: arenda-sosedi-frontend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8092:80"
